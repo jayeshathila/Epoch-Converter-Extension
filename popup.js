@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
  var days = ['Sun','Mon','Tue','We','Thu','Fri','Sat'];
  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+ epochTicker();
  var button = document.getElementById('button');
  button.addEventListener('click', function() {
   myFunction();
@@ -44,6 +45,11 @@ function setValidDisplayProperty() {
  document.getElementById("error_div").style.display ="none";
   document.getElementById("gmt_div").style.display ="inline";
   document.getElementById("local_div").style.display ="inline"; 
+}
+
+function epochTicker() {
+    setInterval(function(){ 
+          document.getElementById("current_epoch").textContent = parseInt(new Date().getTime()/1000); }, 100);
 }
 
 function isInt(value) {
