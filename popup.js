@@ -27,7 +27,7 @@ function myFunction() {
     document.getElementById("local").textContent = date.toString();
     var gmt = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
      var gmt = date.toUTCString();
-    document.getElementById("gmt").textContent = days[date.getUTCDay()] + " " + months[date.getUTCMonth()] + " " + date.getUTCDate() + " " + date.getUTCFullYear() + " " + date.getUTCHours() +" " + date.getUTCMinutes() + " " + date.getUTCSeconds();
+    document.getElementById("gmt").textContent = days[date.getUTCDay()] + " " + months[date.getUTCMonth()] + " " + date.getUTCDate() + " " + date.getUTCFullYear() + " " + date.getUTCHours() +":" + date.getUTCMinutes() + ":" + date.getUTCSeconds();
 }
 
 function setError() {
