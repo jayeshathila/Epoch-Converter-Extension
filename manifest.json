@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
+  "name": "Epoch Converter",
   "description": "This extension converts epoch to human readable",
   "version": "1.0",
 

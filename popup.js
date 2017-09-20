@@ -13,20 +13,37 @@ document.addEventListener('DOMContentLoaded', function() {
       myFunction();  
     }}
     );
+
+function setFormat(num) {
+  num = num.toString();
+  return num.length < 10 ? setFormat("0" + num, 10) : num;
+}
+
 function myFunction() {
     var val  = document.getElementById("epoch").value;
-    if(!isInt(val) || val.length < 10) {
+    if(!isInt(val) || val.length < 1) {
       setError();
       return;
     }
-    if(val.length == 10) {
-      val = val + "000";
-    }
+
+    switch(true) {
+    case val.length == 10:
+        val = val + "000";
+        break;
+    case val.length < 10:
+        val = setFormat(val) + "000";
+        break;
+    case val.length > 10:
+        val = val.slice(0,10) + "000";
+        break;
+}
+
+
     setValidDisplayProperty();
     var date = new Date(parseInt(val));
-    document.getElementById("local").textContent = date.toString();
+    document.getElementById("local").textContent = date.toString().replace(/GMT\+0530/g, '');
     var gmt = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
-     var gmt = date.toUTCString();
+    var gmt = date.toUTCString();
     document.getElementById("gmt").textContent = days[date.getUTCDay()] + " " + months[date.getUTCMonth()] + " " + date.getUTCDate() + " " + date.getUTCFullYear() + " " + date.getUTCHours() +":" + date.getUTCMinutes() + ":" + date.getUTCSeconds();
 }
 
