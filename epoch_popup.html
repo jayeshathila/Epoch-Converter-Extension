@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="popup.js"></script>
-  </head>
-<body style="width:300px; height:100px">
-<br>
-<div style="text-align:center">
-  Current Epoch: <label id="current_epoch" ></label>
-</div>
-<br>
-<br>
-<div style="margin-left: 2rem;">
-  Epoch : <input type="text" name="epoch" id="epoch">  <button id="button">Convert</button>
-</div>
-  <br>
-  <br>
-  <div style="display:none" id="gmt_div">
-  GMT :  <label id="gmt" >GMT Time</label>
-  <br>
-  <br>
-  </div>
+    <link href='bootstrap.min.css' rel='stylesheet'>
+    <link href="main.css" rel="stylesheet">
 
-  <div style="display:none" id="local_div">
-  Local : <label id="local">Local Time</label>
-  <br>
-  <br>
-  </div>
+    <script src="popup.js"></script>
+</head>
+<body>
 
-<div style="display:none" id="error_div">
-   Error : <label id="error">Error Message</label>
+<div class="current_epoch">
+    <label class="spn_current_epoch">Current Time: </label>
+    <label id="current_epoch"></label>
 </div>
-<br>
-<br>
+<div class="line"></div>
+<div class="from_epoch_div_outer">
+    <div class="date-input-container">
+        <input type="text" maxlength="13" name="epoch" id="epoch" class="epoch_input" placeholder="EPOCH">
+    </div>
+    <div class="frm-epc-rsp" id="gmt">
+    </div>
+    <div class="frm-epc-rsp" id="local">
+    </div>
+    <div class="epc-prs-error" id="epc-prs-error">Invalid epoch</div>
+    <div class="thin-line"></div>
+</div>
+
+<div class="to_epoch_div_outer">
+    <div class="date-input-container">
+        <input type="text" maxlength="2" placeholder="DD" class="day"/>
+        <span class="separator">/</span>
+        <input type="text" maxlength="2" placeholder="MM" class="month"/>
+        <span class="separator">/</span>
+        <input type="text" maxlength="4" placeholder="YYYY" class="year"/>
+        <span class="separator"> </span>
+        <input type="text" maxlength="2" placeholder="HH" class="hour"/>
+        <span class="separator"> : </span>
+        <input type="text" maxlength="2" placeholder="MM" class="min"/>
+        <span class="separator"> : </span>
+        <input type="text" maxlength="2" placeholder="SS" class="sec"/>
+    </div>
+    <div class="local tz active">
+        <span>Local</span>
+    </div>
+    <div class="gmt tz">
+        <span>GMT</span>
+    </div>
+    <div class="to-epc-resp" id="to-epc-resp"></div>
+    <div class="to-epc-resp-err" id="to-epc-resp-err">Invalid Date Time</div>
+</div>
+
 <p></p>
 </body>
 </html>

@@ -1,0 +1,180 @@
+html {
+    width: 423px;
+    height: 26rem;
+}
+
+body {
+    margin:0px !important;
+    font-size: 20px;
+    width: 450px;
+    height: 302px;
+    background-color: #2997FE;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #F0F0F0;
+}
+
+.separator {
+    color: white;
+}
+
+label {
+    color: #F0F0F0;
+    font-weight: 400;
+}
+
+input {
+    border: none;
+    background: #2997FE;
+}
+
+.from_epoch_div_outer {
+    width: 36rem;
+}
+
+.line {
+    border-bottom: 2px solid #F0F0F0;
+    margin: 2.5rem 0;
+    width: 46rem;
+}
+
+.thin-line {
+    border-bottom: 1px solid #F0F0F0;
+    margin: 2.5rem 0;
+    width: 46rem;
+}
+
+.prs-error {
+    display: none;
+}
+
+.current_epoch {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.spn_current_epoch {
+
+}
+
+.solo-wrapper {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+}
+
+input.solo {
+    border: none;
+    outline: 0;
+}
+
+/* FOR SEPERATE INPUTS */
+.date-input-container {
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-left: 60px;
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+.date-input-container input {
+    border: 0;
+    outline: 0;
+    text-align: center;
+    width: 27px;
+}
+
+.tz {
+    border: 1px solid #DBD6D6;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 3px;
+    font-size: 15px;
+    display: inline-block;
+    width: 45px;
+    vertical-align: bottom;
+    margin: 0 1rem 4px 0;
+    text-align: center;
+    color: #DBD6D6;
+    cursor: pointer;
+    height: 26px;
+}
+
+.tz.active {
+    border: none;
+    background-color: #FFFFFF;
+    color: #2997FE;
+    box-shadow: none;
+}
+
+.epc-prs-error {
+    margin-top: 2rem;
+    color: #9C1010;
+    text-align: center;
+    width: 100%;
+    font-size: 21px;
+    margin-left: 6rem;
+    font-weight: 400;
+    display: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15)
+}
+
+.to-epc-resp-err {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+    color: #9C1010;
+    font-size: 21px;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.to-epc-resp {
+    display: block;
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.to_epoch_div_outer {
+    width: 45rem;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.tz-tp {
+    color: #DBD6D6;
+}
+
+.date-input-container input.day, .date-input-container input.month {
+    margin-right: 0;
+}
+
+.date-input-container input.year {
+    width: 40px;
+}
+
+.date-input-container input.epoch_input {
+    width: 34rem;
+    font-size: 16px;
+
+}
+
+.date-input-container input {
+    color: white;
+}
+
+.frm-epc-rsp {
+    margin-top: 2rem;
+    color: white;
+    margin-left: 10rem;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+}
