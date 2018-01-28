@@ -3,7 +3,7 @@
 
   "name": "Offline Epoch Converter",
   "description": "This extension converts epoch to human readable",
-  "version": "1.0",
+  "version": "1.1",
 
   "browser_action": {
     "default_icon": "icon.png",

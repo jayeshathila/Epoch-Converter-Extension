@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.getElementById("epoch").value = currDate.getTime();
         document.getElementsByClassName("day")[0].value = currDate.getDate();
-        document.getElementsByClassName("month")[0].value = currDate.getUTCMonth();
+        document.getElementsByClassName("month")[0].value = currDate.getUTCMonth() +1;
         document.getElementsByClassName("year")[0].value = currDate.getUTCFullYear();
         document.getElementsByClassName("hour")[0].value = currDate.getUTCHours();
         document.getElementsByClassName("min")[0].value = currDate.getUTCMinutes();
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function updateFunc() {
-            document.getElementById("current_epoch").textContent = parseInt(new Date().getTime() / 1000);
+            document.getElementById("current_epoch").textContent = parseInt(new Date().getTime() / 1000)*1000;
 
             setHumanTime(document.getElementById("epoch").value)
 
