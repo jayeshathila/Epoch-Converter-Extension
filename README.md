@@ -18,4 +18,4 @@ Open the [line](https://bit.ly/2RUKwAt)  and add it to your extension
 1. Clone this repo.
 2. Open Chrome and go to Menu > Tools > Extensions.
 3. Click Developer mode > Load unpacked extensions...
-4. Browse to and Select the root folder where the manifest.json file.
+4. Browse to  and Select the root folder where the manifest.json file is present.
