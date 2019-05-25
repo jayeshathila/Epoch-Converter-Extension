@@ -11,7 +11,7 @@ This is a lightweight chrome extension which simply converts epoch to and from h
 
 ### For user
 
-Open this(https://bit.ly/2RUKwAt) link and add it to your extension
+Open [this](https://bit.ly/2RUKwAt) link and add it to your extension
 
 ### For developers
 
